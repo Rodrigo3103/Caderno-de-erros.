@@ -200,9 +200,7 @@ Como você tem controle total dos dados no seu dispositivo, pode exercer esses d
 
 Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato:
 
-**Email:** [SEU_EMAIL_AQUI]
-
-**Nota:** Substitua [SEU_EMAIL_AQUI] por um email válido antes de publicar.
+**Email:** rodrigo.l.santos3103@gmail.com
 
 ---
 
