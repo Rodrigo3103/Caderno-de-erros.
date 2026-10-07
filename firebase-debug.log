@@ -1,0 +1,51 @@
+[debug] [2026-10-07T15:56:56.217Z] ----------------------------------------------------------------------
+[debug] [2026-10-07T15:56:56.220Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rodrigo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2026-10-07T15:56:56.220Z] CLI Version:   15.18.0
+[debug] [2026-10-07T15:56:56.220Z] Platform:      win32
+[debug] [2026-10-07T15:56:56.220Z] Node Version:  v22.18.0
+[debug] [2026-10-07T15:56:56.221Z] Time:          Wed Oct 07 2026 12:56:56 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2026-10-07T15:56:56.221Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-07T15:56:56.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-07T15:56:56.431Z] > authorizing via signed-in user (rodrigo.l.santos3103@gmail.com)
+[debug] [2026-10-07T15:56:56.435Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:56:56.435Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:56:56.436Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-10-07T15:56:56.572Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects?pageSize=1000, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000 failed, reason: unable to verify the first certificate
+[debug] [2026-10-07T15:56:56.572Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+[debug] [2026-10-07T15:56:56.574Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects?pageSize=1000
+    at RetryOperation._fn (C:\Users\Rodrigo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:282:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2026-10-07T15:57:51.706Z] ----------------------------------------------------------------------
+[debug] [2026-10-07T15:57:51.709Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rodrigo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-10-07T15:57:51.709Z] CLI Version:   15.18.0
+[debug] [2026-10-07T15:57:51.709Z] Platform:      win32
+[debug] [2026-10-07T15:57:51.709Z] Node Version:  v22.18.0
+[debug] [2026-10-07T15:57:51.710Z] Time:          Wed Oct 07 2026 12:57:51 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2026-10-07T15:57:51.710Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-07T15:57:53.149Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-07T15:57:53.150Z] > authorizing via signed-in user (rodrigo.l.santos3103@gmail.com)
+[debug] [2026-10-07T15:57:53.150Z] [iam] checking project caderno-de-erros for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-10-07T15:57:53.151Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:57:53.151Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:57:53.152Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions [none]
+[debug] [2026-10-07T15:57:53.152Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions  x-goog-user-project=caderno-de-erros
+[debug] [2026-10-07T15:57:53.152Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-10-07T15:57:54.199Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions 403
+[debug] [2026-10-07T15:57:54.199Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions {"error":{"code":403,"message":"Caller does not have required permission to use project caderno-de-erros. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=caderno-de-erros and then retry. Propagation of the new permission may take a few minutes.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"USER_PROJECT_DENIED","domain":"googleapis.com","metadata":{"consoleUrl":"https://console.developers.google.com/iam-admin/iam?project=caderno-de-erros","containerInfo":"caderno-de-erros","consumer":"projects/caderno-de-erros","service":"cloudresourcemanager.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Caller does not have required permission to use project caderno-de-erros. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=caderno-de-erros and then retry. Propagation of the new permission may take a few minutes."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developer console IAM admin","url":"https://console.developers.google.com/iam-admin/iam?project=caderno-de-erros"}]}]}}
+[debug] [2026-10-07T15:57:54.199Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/caderno-de-erros:testIamPermissions had HTTP Error: 403, Caller does not have required permission to use project caderno-de-erros. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=caderno-de-erros and then retry. Propagation of the new permission may take a few minutes.
+[debug] [2026-10-07T15:57:54.200Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:57:54.200Z] Checked if tokens are valid: true, expires at: 1791391175287
+[debug] [2026-10-07T15:57:54.200Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/caderno-de-erros [none]
+[debug] [2026-10-07T15:57:54.659Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/caderno-de-erros 403
+[debug] [2026-10-07T15:57:54.659Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/caderno-de-erros {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-10-07T15:57:54.659Z] Request to https://firebase.googleapis.com/v1beta1/projects/caderno-de-erros had HTTP Error: 403, The caller does not have permission
+[debug] [2026-10-07T15:57:54.660Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/caderno-de-erros had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Rodrigo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\Rodrigo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project caderno-de-erros. Please make sure the project exists and your account has permission to access it.
