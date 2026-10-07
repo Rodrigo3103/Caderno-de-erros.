@@ -1,0 +1,158 @@
+{
+  "name": "Caderno de Erros - Concursos Públicos",
+  "short_name": "Caderno de Erros",
+  "description": "Aplicativo para registrar, organizar e revisar erros de questões de concursos públicos. Funciona offline e ajuda você a aprender com seus erros.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#4F46E5",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "education",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%234F46E5' rx='48'/%3E%3Ctext x='96' y='140' font-size='120' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' fill='%234F46E5' rx='128'/%3E%3Ctext x='256' y='380' font-size='320' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' fill='%234F46E5' rx='18'/%3E%3Ctext x='36' y='54' font-size='48' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%234F46E5' rx='24'/%3E%3Ctext x='48' y='70' font-size='60' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' fill='%234F46E5' rx='32'/%3E%3Ctext x='64' y='94' font-size='80' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Crect width='144' height='144' fill='%234F46E5' rx='36'/%3E%3Ctext x='72' y='106' font-size='90' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 152 152'%3E%3Crect width='152' height='152' fill='%234F46E5' rx='38'/%3E%3Ctext x='76' y='112' font-size='95' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "152x152",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 384'%3E%3Crect width='384' height='384' fill='%234F46E5' rx='96'/%3E%3Ctext x='192' y='285' font-size='240' text-anchor='middle' fill='white'%3E📚%3C/text%3E%3C/svg%3E",
+      "sizes": "384x384",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3Crect width='1280' height='720' fill='%23F9FAFB'/%3E%3Crect x='40' y='40' width='1200' height='120' fill='%234F46E5' rx='20'/%3E%3Ctext x='640' y='110' font-size='48' text-anchor='middle' fill='white' font-weight='bold'%3ECaderno de Erros%3C/text%3E%3Crect x='40' y='180' width='1200' height='500' fill='white' rx='20' stroke='%23E5E7EB' stroke-width='2'/%3E%3Ctext x='640' y='250' font-size='32' text-anchor='middle' fill='%23111827'%3ERegistre e aprenda com seus erros%3C/text%3E%3Ctext x='640' y='350' font-size='24' text-anchor='middle' fill='%236B7280'%3E✅ Funciona Offline%3C/text%3E%3Ctext x='640' y='400' font-size='24' text-anchor='middle' fill='%236B7280'%3E📊 Estatísticas Detalhadas%3C/text%3E%3Ctext x='640' y='450' font-size='24' text-anchor='middle' fill='%236B7280'%3E🔄 Modo de Revisão%3C/text%3E%3Ctext x='640' y='500' font-size='24' text-anchor='middle' fill='%236B7280'%3E🎯 Filtros e Busca Avançada%3C/text%3E%3C/svg%3E",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Tela principal do aplicativo"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'%3E%3Crect width='540' height='720' fill='%23F9FAFB'/%3E%3Crect x='20' y='20' width='500' height='100' fill='%234F46E5' rx='16'/%3E%3Ctext x='270' y='80' font-size='36' text-anchor='middle' fill='white' font-weight='bold'%3E📚 Caderno de Erros%3C/text%3E%3Crect x='20' y='140' width='500' height='560' fill='white' rx='16' stroke='%23E5E7EB' stroke-width='2'/%3E%3Ctext x='270' y='200' font-size='24' text-anchor='middle' fill='%23111827' font-weight='bold'%3ERegistre seus erros%3C/text%3E%3Crect x='40' y='230' width='460' height='50' fill='%23F3F4F6' rx='8'/%3E%3Crect x='40' y='300' width='460' height='50' fill='%23F3F4F6' rx='8'/%3E%3Crect x='40' y='370' width='460' height='50' fill='%23F3F4F6' rx='8'/%3E%3Crect x='40' y='440' width='460' height='120' fill='%23F3F4F6' rx='8'/%3E%3Crect x='40' y='580' width='460' height='50' fill='%234F46E5' rx='8'/%3E%3Ctext x='270' y='615' font-size='20' text-anchor='middle' fill='white' font-weight='bold'%3E💾 Salvar%3C/text%3E%3C/svg%3E",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Formulário de cadastro mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Novo Erro",
+      "short_name": "Novo",
+      "description": "Cadastrar um novo erro",
+      "url": "./index.html?tab=cadastro",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%234F46E5' rx='24'/%3E%3Ctext x='48' y='70' font-size='48' text-anchor='middle' fill='white'%3E➕%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Meus Erros",
+      "short_name": "Lista",
+      "description": "Ver lista de erros cadastrados",
+      "url": "./index.html?tab=lista",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%234F46E5' rx='24'/%3E%3Ctext x='48' y='70' font-size='48' text-anchor='middle' fill='white'%3E📋%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Revisão",
+      "short_name": "Revisar",
+      "description": "Revisar erros cadastrados",
+      "url": "./index.html?tab=revisao",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%234F46E5' rx='24'/%3E%3Ctext x='48' y='70' font-size='48' text-anchor='middle' fill='white'%3E🔄%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Estatísticas",
+      "short_name": "Stats",
+      "description": "Ver estatísticas de estudo",
+      "url": "./index.html?stats=true",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%234F46E5' rx='24'/%3E%3Ctext x='48' y='70' font-size='48' text-anchor='middle' fill='white'%3E📊%3C/text%3E%3C/svg%3E",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "iarc_rating_id": "",
+  "features": [
+    "Cross Platform",
+    "Offline Support",
+    "Fast",
+    "Installable",
+    "Responsive Design"
+  ]
+}

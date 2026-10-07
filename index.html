@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caderno de Erros para Concursos Públicos - Registre e aprenda com seus erros">
+    <meta name="theme-color" content="#4F46E5">
+    <title>Caderno de Erros - Concursos Públicos</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📚 Caderno de Erros</h1>
+                <p class="subtitle">Aprenda com seus erros e conquiste sua aprovação</p>
+            </div>
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-icon" title="Alternar tema">🌙</button>
+                <button id="statsBtn" class="btn-secondary">📊 Estatísticas</button>
+            </div>
+        </header>
+
+        <!-- Status de conexão -->
+        <div id="offlineIndicator" class="offline-indicator hidden">
+            📡 Modo Offline - Suas alterações serão salvas localmente
+        </div>
+
+        <!-- Abas de navegação -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="cadastro">➕ Novo Erro</button>
+            <button class="tab" data-tab="lista">📋 Meus Erros</button>
+            <button class="tab" data-tab="revisao">🔄 Revisão</button>
+        </nav>
+
+        <!-- Conteúdo das Abas -->
+        <main class="main-content">
+            
+            <!-- Aba: Cadastro de Erro -->
+            <section id="cadastro" class="tab-content active">
+                <div class="card">
+                    <h2>Registrar Novo Erro</h2>
+                    <form id="errorForm">
+                        <div class="form-group">
+                            <label for="disciplina">Disciplina *</label>
+                            <input type="text" id="disciplina" list="disciplinasList" required placeholder="Ex: Direito Constitucional">
+                            <datalist id="disciplinasList"></datalist>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="banca">Banca Examinadora</label>
+                                <input type="text" id="banca" list="bancasList" placeholder="Ex: CESPE/CEBRASPE">
+                                <datalist id="bancasList"></datalist>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="concurso">Concurso/Ano</label>
+                                <input type="text" id="concurso" placeholder="Ex: TRT 2023">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto Específico *</label>
+                            <input type="text" id="assunto" required placeholder="Ex: Direitos Fundamentais">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="questao">Questão/Enunciado *</label>
+                            <textarea id="questao" rows="4" required placeholder="Cole aqui o enunciado da questão..."></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="minhaResposta">Minha Resposta</label>
+                                <input type="text" id="minhaResposta" placeholder="Ex: Alternativa C">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="respostaCorreta">Resposta Correta *</label>
+                                <input type="text" id="respostaCorreta" required placeholder="Ex: Alternativa B">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="explicacao">Explicação do Erro / Comentários *</label>
+                            <textarea id="explicacao" rows="4" required placeholder="Por que errei? O que aprendi?"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dificuldade">Nível de Dificuldade</label>
+                                <select id="dificuldade">
+                                    <option value="facil">😊 Fácil</option>
+                                    <option value="medio" selected>😐 Médio</option>
+                                    <option value="dificil">😰 Difícil</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tags">Tags (separadas por vírgula)</label>
+                                <input type="text" id="tags" placeholder="Ex: jurisprudência, recente, pegadinha">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">💾 Salvar Erro</button>
+                            <button type="reset" class="btn-secondary">🔄 Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Aba: Lista de Erros -->
+            <section id="lista" class="tab-content">
+                <div class="card">
+                    <div class="lista-header">
+                        <h2>Meus Erros Cadastrados</h2>
+                        <div class="counter">
+                            <span id="errorCount">0</span> erros registrados
+                        </div>
+                    </div>
+
+                    <!-- Filtros -->
+                    <div class="filters">
+                        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar por disciplina, assunto, banca...">
+                        
+                        <div class="filter-row">
+                            <select id="filterDisciplina" class="filter-select">
+                                <option value="">Todas as Disciplinas</option>
+                            </select>
+
+                            <select id="filterBanca" class="filter-select">
+                                <option value="">Todas as Bancas</option>
+                            </select>
+
+                            <select id="filterDificuldade" class="filter-select">
+                                <option value="">Todas as Dificuldades</option>
+                                <option value="facil">😊 Fácil</option>
+                                <option value="medio">😐 Médio</option>
+                                <option value="dificil">😰 Difícil</option>
+                            </select>
+
+                            <select id="sortBy" class="filter-select">
+                                <option value="recent">Mais Recentes</option>
+                                <option value="oldest">Mais Antigos</option>
+                                <option value="disciplina">Por Disciplina</option>
+                                <option value="dificuldade">Por Dificuldade</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Lista de erros -->
+                    <div id="errorsList" class="errors-list">
+                        <div class="empty-state">
+                            <div class="empty-icon">📝</div>
+                            <h3>Nenhum erro cadastrado ainda</h3>
+                            <p>Comece registrando seus erros para aprender com eles!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aba: Revisão -->
+            <section id="revisao" class="tab-content">
+                <div class="card">
+                    <h2>Modo Revisão</h2>
+                    <p class="info-text">Revise seus erros de forma aleatória para fixar o conteúdo</p>
+                    
+                    <div id="revisaoContainer">
+                        <div class="empty-state">
+                            <div class="empty-icon">🔄</div>
+                            <h3>Cadastre alguns erros primeiro</h3>
+                            <p>A revisão ficará disponível quando você tiver erros cadastrados</p>
+                        </div>
+                    </div>
+
+                    <div id="revisaoCard" class="revisao-card hidden">
+                        <div class="revisao-header">
+                            <span class="revisao-counter"><span id="revisaoIndex">1</span>/<span id="revisaoTotal">0</span></span>
+                            <button id="shuffleBtn" class="btn-icon" title="Embaralhar">🔀</button>
+                        </div>
+
+                        <div class="revisao-info">
+                            <span class="badge" id="revisaoDisciplina">Disciplina</span>
+                            <span class="badge" id="revisaoAssunto">Assunto</span>
+                            <span class="badge-dificuldade" id="revisaoDificuldade">😐</span>
+                        </div>
+
+                        <div class="revisao-content">
+                            <h3>Questão:</h3>
+                            <div class="revisao-questao" id="revisaoQuestao"></div>
+
+                            <div class="revisao-resposta hidden" id="revisaoRespostaDiv">
+                                <h3>Sua Resposta:</h3>
+                                <p id="revisaoMinhaResposta" class="resposta-errada"></p>
+
+                                <h3>Resposta Correta:</h3>
+                                <p id="revisaoRespostaCorreta" class="resposta-certa"></p>
+
+                                <h3>Explicação:</h3>
+                                <p id="revisaoExplicacao"></p>
+                            </div>
+                        </div>
+
+                        <div class="revisao-actions">
+                            <button id="showAnswerBtn" class="btn-primary">👁️ Mostrar Resposta</button>
+                            <button id="nextErrorBtn" class="btn-secondary hidden">➡️ Próximo Erro</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Modal de Estatísticas -->
+        <div id="statsModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📊 Estatísticas de Estudo</h2>
+                    <button class="modal-close" id="closeStatsModal">✕</button>
+                </div>
+                <div class="modal-body" id="statsContent">
+                    <!-- Conteúdo será gerado dinamicamente -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Detalhes do Erro -->
+        <div id="detailsModal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Detalhes do Erro</h2>
+                    <button class="modal-close" id="closeDetailsModal">✕</button>
+                </div>
+                <div class="modal-body" id="detailsContent">
+                    <!-- Conteúdo será gerado dinamicamente -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>💪 Continue estudando! Cada erro é uma oportunidade de aprendizado.</p>
+            <p class="version">v1.0.0 | Funciona offline</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="sw-register.js"></script>
+</body>
+</html>
