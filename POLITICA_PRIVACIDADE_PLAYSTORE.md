@@ -250,4 +250,4 @@ Este aplicativo foi desenvolvido com foco em:
 
 ---
 
-© 2026 Caderno de Erros - Concursos Públicos. Todos os direitos reservados.
+© 2026 Caderno de Erros - Concursos Públicos. Todos os direitos reservados..
